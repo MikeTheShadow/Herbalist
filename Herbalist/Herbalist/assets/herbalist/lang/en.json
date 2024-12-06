@@ -1,3 +1,9 @@
 {
-    "hello": "hello world!"
+    "_comment" : "Sage",
+    "block-crop-sage-1": "Growing Sage",
+    "block-crop-sage-2": "Growing Sage",
+    "block-crop-sage-3": "Growing Sage",
+    "block-crop-sage-4": "Mature Sage",
+    "item-seeds-sage": "Sage Seeds",
+    "item-herb-sage" : "Sage"
 }

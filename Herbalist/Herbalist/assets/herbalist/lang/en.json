@@ -44,5 +44,13 @@
     "block-crop-comfrey-3": "Growing Comfrey",
     "block-crop-comfrey-4": "Mature Comfrey",
     "item-seeds-comfrey": "Comfrey Seeds",
-    "item-herb-comfrey" : "Comfrey"
+    "item-herb-comfrey" : "Comfrey",
+
+    "_comment" : "Ashwagandha",
+    "block-crop-ashwagandha-1": "Growing Ashwagandha",
+    "block-crop-ashwagandha-2": "Growing Ashwagandha",
+    "block-crop-ashwagandha-3": "Growing Ashwagandha",
+    "block-crop-ashwagandha-4": "Mature Ashwagandha",
+    "item-seeds-ashwagandha": "Ashwagandha Seeds",
+    "item-root-ashwagandha" : "Ashwagandha"
 }

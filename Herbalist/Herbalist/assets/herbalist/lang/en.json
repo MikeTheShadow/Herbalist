@@ -29,5 +29,12 @@
     "block-crop-peppermint-3": "Growing Peppermint",
     "block-crop-peppermint-4": "Mature Peppermint",
     "item-seeds-peppermint": "Peppermint Seeds",
-    "item-herb-peppermint" : "Peppermint"
+    "item-herb-peppermint" : "Peppermint",
+
+    "_comment" : "Aloe Vera",
+    "block-modifiedbush-aloevera-flowering" : "Growing Aloe Vera",
+    "block-modifiedbush-aloevera-ripe" : "Grown Aloe Vera",
+    "modifiedbush-growing-xdays": "Will grow in {0} days, weather permitting",
+    "modifiedbush-growing-1day": "Will grow in less than a day, weather permitting",
+    "item-modifiedbush-aloevera" : "Aloe Vera"
 }

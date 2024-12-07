@@ -39,6 +39,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="assets\herbalist\textures\block\plant\modifiedbush\aloevera\" />
       <Folder Include="assets\herbalist\textures\item\root\" />
     </ItemGroup>
 

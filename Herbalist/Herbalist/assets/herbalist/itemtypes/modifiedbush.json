@@ -1,0 +1,45 @@
+﻿{
+  "code": "modifiedbush",
+  "maxstacksize": 32,
+  "variantgroups": [
+    { "code": "type", "states": ["aloevera" ] }
+  ],
+  shapebytype: {},
+  "attributes": {
+    "foodTags": ["{type}"],
+  },
+  "texture": { base: "item/modifiedbush/{type}" },
+  "creativeinventory": { "general": ["*"], "items": ["*"] },
+  "transitionableProps": [{
+    type: "Perish",
+    freshHours: { avg: 840 },
+    transitionHours: { avg: 72 },
+    transitionedStack: { type: "item", code: "game:rot" },
+    transitionRatio: 0.20
+  }],
+  "materialDensity": 600,
+  "nutritionPropsByType": {
+    "*": { "saturation": 15, "foodcategory": "Vegetable" }
+  },
+  guiTransformByType: {
+    "*": {
+      translation: { x: 0, y: 0, z: 0 },
+      rotation: { x: 0, y: 123, z: 33 },
+      origin: { x: 0.48, y: 0.6, z: 0.35 },
+      "scale": 1.2
+    }
+  },
+  tpHandTransformByType: {
+    "*": {
+      translation: { x: 0.8, y: 0.2, z: 0.5 },
+      rotation: { x: -90, y: 20, z: 0 },
+      origin: { x: 0, y: 0, z: 0 },
+      scale: 0.2
+    }
+  },
+  groundTransformByType: {
+    "*": {
+      scale: 2.0
+    }
+  }
+}

@@ -1,6 +1,4 @@
-﻿using Herbalist.blocks;
-using Herbalist.items.herbs;
-using Herbalist.items.seeds;
+﻿using Herbalist.blockentities;
 using Vintagestory.API.Client;
 using Vintagestory.API.Server;
 using Vintagestory.API.Common;
@@ -14,28 +12,9 @@ public class HerbalistModSystem : ModSystem
     // Called on server and client
     public override void Start(ICoreAPI api)
     {
-        api.Logger.Notification("preprocessing!");
         _api = api;
         
-        // Sage
-        RegisterBlock("BlockSage", typeof(BlockSage));
-        RegisterItem("SageSeeds", typeof(SageSeeds));
-        RegisterItem("ItemSage", typeof(ItemSage));
-        
-        // Thyme
-        RegisterBlock("BlockThyme", typeof(BlockThyme));
-        RegisterItem("ThymeSeeds", typeof(ThymeSeeds));
-        RegisterItem("ItemThyme", typeof(ItemThyme));
-        
-        // Ginseng
-        RegisterBlock("BlockGinseng", typeof(BlockGinseng));
-        RegisterItem("GinsengSeeds", typeof(GinsengSeeds));
-        RegisterItem("ItemGinseng", typeof(ItemGinseng));
-        
-        // Peppermint
-        RegisterBlock("BlockPeppermint", typeof(BlockPeppermint));
-        RegisterItem("PeppermintSeeds", typeof(PeppermintSeeds));
-        RegisterItem("ItemPeppermint", typeof(ItemPeppermint));
+        RegisterBlockEntity("ModifiedBush", typeof(BlockEntityModifiedBush));
     }
 
     public override void StartServerSide(ICoreServerAPI api)
@@ -57,5 +36,10 @@ public class HerbalistModSystem : ModSystem
     private void RegisterItem(string name, System.Type itemType)
     {
         _api.RegisterItemClass(Mod.Info.ModID + "." + name, itemType);
+    }
+    
+    private void RegisterBlockEntity(string name, System.Type itemType)
+    {
+        _api.RegisterBlockEntityClass(Mod.Info.ModID + "." + name, itemType);
     }
 }

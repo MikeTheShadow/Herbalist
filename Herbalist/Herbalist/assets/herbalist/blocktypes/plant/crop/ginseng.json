@@ -51,15 +51,15 @@
   dropsByType: {
     "*-2": [
       { type: "item", code: "seeds-ginseng", quantity: { avg: 0.99 }  },
-      { type: "item", code: "herb-ginseng", quantity: { avg: 1, var: 1 }  },
+      { type: "item", code: "root-ginseng", quantity: { avg: 1, var: 1 }  },
     ],
     "*-3": [
       { type: "item", code: "seeds-ginseng", quantity: { avg: 1.2 }  },
-      { type: "item", code: "herb-ginseng", quantity: { avg: 3, var: 2 }  },
+      { type: "item", code: "root-ginseng", quantity: { avg: 3, var: 2 }  },
     ],
     "*-4": [
       { type: "item", code: "seeds-ginseng", quantity: { avg: 2 }  },
-      { type: "item", code: "herb-ginseng", quantity: { avg: 6, "var": 4} }
+      { type: "item", code: "root-ginseng", quantity: { avg: 6, "var": 4} }
     ]
   },
   cropProps: {

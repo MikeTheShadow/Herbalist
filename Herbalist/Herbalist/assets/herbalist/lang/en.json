@@ -52,5 +52,13 @@
     "block-crop-ashwagandha-3": "Growing Ashwagandha",
     "block-crop-ashwagandha-4": "Mature Ashwagandha",
     "item-seeds-ashwagandha": "Ashwagandha Seeds",
-    "item-root-ashwagandha" : "Ashwagandha"
+    "item-root-ashwagandha" : "Ashwagandha",
+
+    "_comment" : "Wild Garlic",
+    "block-crop-wildgarlic-1": "Growing Wild Garlic",
+    "block-crop-wildgarlic-2": "Growing Wild Garlic",
+    "block-crop-wildgarlic-3": "Growing Wild Garlic",
+    "block-crop-wildgarlic-4": "Mature Wild Garlic",
+    "item-seeds-wildgarlic": "Wild Garlic Seeds",
+    "item-herb-wildgarlic" : "Wild Garlic"
 }

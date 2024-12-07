@@ -4,40 +4,16 @@
   attributesByType: {
   },
   variantgroups: [
-    { code: "type", states: ["sage", "thyme", "peppermint", "comfrey"] }
+    { code: "type", states: ["sage", "thyme", "peppermint", "comfrey", "wildgarlic"] }
   ],
   shapebytype: {},
   "texture": { "base" :  "item/herb/{type}"},
   creativeinventory: { "general": ["*"], "items": ["*"] },
   nutritionPropsByType: {
-    "*-sage": { satiety: 15, foodcategory: "Vegetable" },
-    "*-thyme": { satiety: 15, foodcategory: "Vegetable" },
-    "*-peppermint": { satiety: 15, foodcategory: "Vegetable" },
     "*": { satiety: 15, foodcategory: "Vegetable" }
   },
   transitionablePropsByType: {
-    "*-sage": [{
-      type: "Perish",
-      freshHours: { avg: 840 },
-      transitionHours: { avg: 72 },
-      transitionedStack: { type: "item", code: "game:rot" },
-      transitionRatio: 0.20
-    }],
-    "*-thyme": [{
-      type: "Perish",
-      freshHours: { avg: 840 },
-      transitionHours: { avg: 72 },
-      transitionedStack: { type: "item", code: "game:rot" },
-      transitionRatio: 0.20
-    }],
-    "*-peppermint": [{
-      type: "Perish",
-      freshHours: { avg: 840 },
-      transitionHours: { avg: 72 },
-      transitionedStack: { type: "item", code: "game:rot" },
-      transitionRatio: 0.20
-    }],
-    "*-comfrey": [{
+    "*": [{
       type: "Perish",
       freshHours: { avg: 840 },
       transitionHours: { avg: 72 },

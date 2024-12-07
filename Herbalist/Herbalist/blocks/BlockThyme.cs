@@ -2,7 +2,7 @@
 
 namespace Herbalist.blocks;
 
-public class BlockSage : BlockCrop
+public class BlockThyme : BlockCrop
 {
     
 }

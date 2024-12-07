@@ -13,26 +13,34 @@ public class HerbalistModSystem : ModSystem
     private ICoreAPI _api;
 
     // Called on server and client
-    // Useful for registering block/entity classes on both sides
     public override void Start(ICoreAPI api)
     {
         api.Logger.Notification("preprocessing!");
         _api = api;
+        
+        // Sage
         RegisterBlock("BlockSage", typeof(BlockSage));
-        RegisterItem("SageSeeds",typeof(SageSeeds));
-        RegisterItem("ItemSage",typeof(ItemSage));
+        RegisterItem("SageSeeds", typeof(SageSeeds));
+        RegisterItem("ItemSage", typeof(ItemSage));
+
+        // Thyme
+        RegisterBlock("BlockThyme", typeof(BlockThyme));
+        RegisterItem("ThymeSeeds", typeof(ThymeSeeds));
+        RegisterItem("ItemThyme", typeof(ItemThyme));
+        
     }
 
     public override void StartServerSide(ICoreServerAPI api)
     {
-        api.Logger.Notification("Hello from template mod server side: " + Lang.Get("herbalist:hello"));
+        
     }
 
     public override void StartClientSide(ICoreClientAPI api)
     {
-        api.Logger.Notification("Hello from template mod client side: " + Lang.Get("herbalist:hello"));
+        
     }
 
+    // Helper methods
     private void RegisterBlock(string name, System.Type blockType)
     {
         _api.RegisterBlockClass(Mod.Info.ModID + "." + name, blockType);

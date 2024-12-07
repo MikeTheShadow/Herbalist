@@ -3,7 +3,7 @@
   class: "ItemPlantableSeed",
   maxstacksize: 64,
   variantgroups: [
-    { code: "type", states: [ "sage" ] },
+    { code: "type", states: [ "sage","thyme" ] },
   ],
   shape: { base: "item/resource/seeds/seedbag" },
   textures: {

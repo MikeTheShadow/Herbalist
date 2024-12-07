@@ -5,5 +5,13 @@
     "block-crop-sage-3": "Growing Sage",
     "block-crop-sage-4": "Mature Sage",
     "item-seeds-sage": "Sage Seeds",
-    "item-herb-sage" : "Sage"
+    "item-herb-sage" : "Sage",
+    
+    "_comment" : "Thyme",
+    "block-crop-thyme-1": "Growing Thyme",
+    "block-crop-thyme-2": "Growing Thyme",
+    "block-crop-thyme-3": "Growing Thyme",
+    "block-crop-thyme-4": "Mature Thyme",
+    "item-seeds-thyme": "Thyme Seeds",
+    "item-herb-thyme" : "Thyme"
 }

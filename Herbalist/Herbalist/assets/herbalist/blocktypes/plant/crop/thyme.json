@@ -1,0 +1,81 @@
+﻿{
+  code: "crop",
+  class: "herbalist.BlockThyme",
+  behaviors: [{name: "Unstable"}],
+  variantgroups: [
+    { code: "type", states: ["thyme"] },
+    { code: "stage", states: ["1", "2", "3","4"] },
+  ],
+  creativeinventory: { "general": [""], "plants": [""] },
+  renderpass: "OpaqueNoCull",
+  shapeByType: {
+    "*": { base: "game:block/plant/crop/crossdense" }
+  },
+  blockmaterial: "Plant",
+  randomizeRotations: true,
+  textures: {
+    "0": { base: "block/plant/crop/{type}/e{stage}" },
+    "1": { base: "block/plant/crop/{type}/w{stage}" },
+  },
+  attributes: {
+    butterflyFeedByType: {
+      "*-1": false,
+      "*-4": false,
+      "*": true
+    },
+    beeFeedByType: {
+      "*-4": false,
+      "*": true
+    },
+    sitHeight: 0.35,
+    tickGrowthProbability: 0.05,
+    handbook: {
+      include: true
+    }
+  },
+  sideopaque: {
+    all: false
+  },
+  sidesolid: {
+    all: false
+  },
+  replaceable: 3000,
+  lightAbsorption: 0,
+  resistance: 0.5,
+  sounds: {
+    place: "game:block/plant",
+    break: "game:block/plant",
+    hit: "game:block/plant"
+  },
+  rainPermeable: false,
+  dropsByType: {
+    "*-2": [
+      { type: "item", code: "seeds-thyme", quantity: { avg: 0.99 }  },
+      { type: "item", code: "herb-thyme", quantity: { avg: 1, var: 1 }  },
+    ],
+    "*-3": [
+      { type: "item", code: "seeds-thyme", quantity: { avg: 1.2 }  },
+      { type: "item", code: "herb-thyme", quantity: { avg: 3, var: 2 }  },
+    ],
+    "*-4": [
+      { type: "item", code: "seeds-thyme", quantity: { avg: 2 }  },
+      { type: "item", code: "herb-thyme", quantity: { avg: 6, "var": 4} }
+    ]
+  },
+  cropProps: {
+    "__comment": "Thyme has a somewhat high requirement for phosphorus. ",
+    requiredNutrient: "P",
+    nutrientConsumption: 25,
+    growthStages: 4,
+    totalGrowthMonths: 2.5,
+    coldDamageBelow: 0,
+    heatDamageAbove: 35
+  },
+  collisionbox: null,
+  selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.25, z2: 0.9375 },
+  materialDensity: 200,
+  combustibleProps: {
+    burnTemperature: 600,
+    burnDuration: 10,
+  }
+}

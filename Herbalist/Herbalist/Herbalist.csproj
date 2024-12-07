@@ -38,9 +38,4 @@
         </Content>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="assets\herbalist\shapes\block\plant\crop\sage\" />
-      <Folder Include="assets\herbalist\textures\item\resource\seeds\" />
-    </ItemGroup>
-
 </Project>

@@ -21,5 +21,13 @@
     "block-crop-ginseng-3": "Growing Ginseng",
     "block-crop-ginseng-4": "Mature Ginseng",
     "item-seeds-ginseng": "Ginseng Seeds",
-    "item-root-ginseng" : "Ginseng"
+    "item-root-ginseng" : "Ginseng",
+
+    "_comment" : "Peppermint",
+    "block-crop-peppermint-1": "Growing Peppermint",
+    "block-crop-peppermint-2": "Growing Peppermint",
+    "block-crop-peppermint-3": "Growing Peppermint",
+    "block-crop-peppermint-4": "Mature Peppermint",
+    "item-seeds-peppermint": "Peppermint Seeds",
+    "item-herb-peppermint" : "Peppermint"
 }

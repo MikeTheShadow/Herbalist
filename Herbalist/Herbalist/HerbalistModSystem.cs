@@ -32,6 +32,10 @@ public class HerbalistModSystem : ModSystem
         RegisterItem("GinsengSeeds", typeof(GinsengSeeds));
         RegisterItem("ItemGinseng", typeof(ItemGinseng));
         
+        // Peppermint
+        RegisterBlock("BlockPeppermint", typeof(BlockPeppermint));
+        RegisterItem("PeppermintSeeds", typeof(PeppermintSeeds));
+        RegisterItem("ItemPeppermint", typeof(ItemPeppermint));
     }
 
     public override void StartServerSide(ICoreServerAPI api)

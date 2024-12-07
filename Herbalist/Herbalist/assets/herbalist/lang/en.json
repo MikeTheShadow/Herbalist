@@ -68,5 +68,13 @@
     "block-crop-licorice-3": "Growing Licorice",
     "block-crop-licorice-4": "Mature Licorice",
     "item-seeds-licorice": "Licorice Seeds",
-    "item-root-licorice" : "Licorice Root"
+    "item-root-licorice" : "Licorice Root",
+
+    "_comment" : "Rosemary",
+    "block-crop-rosemary-1": "Growing Rosemary",
+    "block-crop-rosemary-2": "Growing Rosemary",
+    "block-crop-rosemary-3": "Growing Rosemary",
+    "block-crop-rosemary-4": "Mature Rosemary",
+    "item-seeds-rosemary": "Rosemary Seeds",
+    "item-herb-rosemary" : "Rosemary"
 }

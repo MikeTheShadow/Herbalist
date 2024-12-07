@@ -4,7 +4,7 @@
   attributesByType: {
   },
   variantgroups: [
-    { code: "type", states: ["sage", "thyme", "peppermint", "comfrey", "wildgarlic"] }
+    { code: "type", states: ["sage", "thyme", "peppermint", "comfrey", "wildgarlic", "rosemary"] }
   ],
   shapebytype: {},
   "texture": { "base" :  "item/herb/{type}"},

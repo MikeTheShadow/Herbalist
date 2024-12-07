@@ -3,7 +3,6 @@ using Herbalist.items.herbs;
 using Herbalist.items.seeds;
 using Vintagestory.API.Client;
 using Vintagestory.API.Server;
-using Vintagestory.API.Config;
 using Vintagestory.API.Common;
 
 namespace Herbalist;
@@ -22,11 +21,16 @@ public class HerbalistModSystem : ModSystem
         RegisterBlock("BlockSage", typeof(BlockSage));
         RegisterItem("SageSeeds", typeof(SageSeeds));
         RegisterItem("ItemSage", typeof(ItemSage));
-
+        
         // Thyme
         RegisterBlock("BlockThyme", typeof(BlockThyme));
         RegisterItem("ThymeSeeds", typeof(ThymeSeeds));
         RegisterItem("ItemThyme", typeof(ItemThyme));
+        
+        // Ginseng
+        RegisterBlock("BlockGinseng", typeof(BlockGinseng));
+        RegisterItem("GinsengSeeds", typeof(GinsengSeeds));
+        RegisterItem("ItemGinseng", typeof(ItemGinseng));
         
     }
 

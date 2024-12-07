@@ -38,4 +38,8 @@
         </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="assets\herbalist\textures\item\root\" />
+    </ItemGroup>
+
 </Project>

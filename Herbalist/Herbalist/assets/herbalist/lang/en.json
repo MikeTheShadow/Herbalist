@@ -13,5 +13,13 @@
     "block-crop-thyme-3": "Growing Thyme",
     "block-crop-thyme-4": "Mature Thyme",
     "item-seeds-thyme": "Thyme Seeds",
-    "item-herb-thyme" : "Thyme"
+    "item-herb-thyme" : "Thyme",
+    
+    "_comment" : "Ginseng",
+    "block-crop-ginseng-1": "Growing Ginseng",
+    "block-crop-ginseng-2": "Growing Ginseng",
+    "block-crop-ginseng-3": "Growing Ginseng",
+    "block-crop-ginseng-4": "Mature Ginseng",
+    "item-seeds-ginseng": "Ginseng Seeds",
+    "item-root-ginseng" : "Ginseng"
 }

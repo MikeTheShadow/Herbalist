@@ -1,6 +1,6 @@
 ﻿{
   code: "crop",
-  class: "herbalist.BlockSage",
+  class: "BlockCrop",
   behaviors: [{name: "Unstable"}],
   variantgroups: [
     { code: "type", states: ["sage"] },

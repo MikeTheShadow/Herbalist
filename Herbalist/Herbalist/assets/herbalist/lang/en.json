@@ -36,5 +36,13 @@
     "block-modifiedbush-aloevera-ripe" : "Grown Aloe Vera",
     "modifiedbush-growing-xdays": "Will grow in {0} days, weather permitting",
     "modifiedbush-growing-1day": "Will grow in less than a day, weather permitting",
-    "item-modifiedbush-aloevera" : "Aloe Vera"
+    "item-modifiedbush-aloevera" : "Aloe Vera",
+
+    "_comment" : "Comfrey",
+    "block-crop-comfrey-1": "Growing Comfrey",
+    "block-crop-comfrey-2": "Growing Comfrey",
+    "block-crop-comfrey-3": "Growing Comfrey",
+    "block-crop-comfrey-4": "Mature Comfrey",
+    "item-seeds-comfrey": "Comfrey Seeds",
+    "item-herb-comfrey" : "Comfrey"
 }

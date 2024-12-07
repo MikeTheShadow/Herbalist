@@ -1,6 +1,6 @@
 ﻿{
   code: "crop",
-  class: "herbalist.BlockThyme",
+  class: "BlockCrop",
   behaviors: [{name: "Unstable"}],
   variantgroups: [
     { code: "type", states: ["thyme"] },

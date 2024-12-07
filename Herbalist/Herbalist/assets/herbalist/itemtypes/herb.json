@@ -4,7 +4,7 @@
   attributesByType: {
   },
   variantgroups: [
-    { code: "type", states: ["sage", "thyme", "peppermint"] }
+    { code: "type", states: ["sage", "thyme", "peppermint", "comfrey"] }
   ],
   shapebytype: {},
   "texture": { "base" :  "item/herb/{type}"},
@@ -31,6 +31,13 @@
       transitionRatio: 0.20
     }],
     "*-peppermint": [{
+      type: "Perish",
+      freshHours: { avg: 840 },
+      transitionHours: { avg: 72 },
+      transitionedStack: { type: "item", code: "game:rot" },
+      transitionRatio: 0.20
+    }],
+    "*-comfrey": [{
       type: "Perish",
       freshHours: { avg: 840 },
       transitionHours: { avg: 72 },

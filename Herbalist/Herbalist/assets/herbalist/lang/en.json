@@ -60,5 +60,13 @@
     "block-crop-wildgarlic-3": "Growing Wild Garlic",
     "block-crop-wildgarlic-4": "Mature Wild Garlic",
     "item-seeds-wildgarlic": "Wild Garlic Seeds",
-    "item-herb-wildgarlic" : "Wild Garlic"
+    "item-herb-wildgarlic" : "Wild Garlic",
+
+    "_comment" : "Licorice Root",
+    "block-crop-licorice-1": "Growing Licorice",
+    "block-crop-licorice-2": "Growing Licorice",
+    "block-crop-licorice-3": "Growing Licorice",
+    "block-crop-licorice-4": "Mature Licorice",
+    "item-seeds-licorice": "Licorice Seeds",
+    "item-root-licorice" : "Licorice Root"
 }

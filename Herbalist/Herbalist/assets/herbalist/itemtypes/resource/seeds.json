@@ -3,7 +3,7 @@
   class: "ItemPlantableSeed",
   maxstacksize: 64,
   variantgroups: [
-    { code: "type", states: [ "sage","thyme","ginseng","peppermint","comfrey","ashwagandha","wildgarlic" ] },
+    { code: "type", states: [ "sage","thyme","ginseng","peppermint","comfrey","ashwagandha","wildgarlic","licorice" ] },
   ],
   shape: { base: "item/resource/seeds/seedbag" },
   textures: {

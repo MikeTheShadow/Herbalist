@@ -4,7 +4,7 @@
   attributesByType: {
   },
   variantgroups: [
-    { code: "type", states: ["ginseng","ashwagandha"] }
+    { code: "type", states: ["ginseng","ashwagandha","licorice"] }
   ],
   shapebytype: {},
   "texture": { "base" :  "item/root/{type}"},

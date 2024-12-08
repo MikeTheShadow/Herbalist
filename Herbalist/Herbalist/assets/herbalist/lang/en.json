@@ -90,5 +90,13 @@
     "block-crop-dandelion-3": "Growing Dandelion",
     "block-crop-dandelion-4": "Mature Dandelion",
     "item-seeds-dandelion": "Dandelion Seeds",
-    "item-herb-dandelion" : "Dandelion"
+    "item-herb-dandelion" : "Dandelion",
+
+    "_comment" : "Nettle",
+    "block-crop-nettle-1": "Growing Nettle",
+    "block-crop-nettle-2": "Growing Nettle",
+    "block-crop-nettle-3": "Growing Nettle",
+    "block-crop-nettle-4": "Mature Nettle",
+    "item-seeds-nettle": "Nettle Seeds",
+    "item-herb-nettle" : "Nettle"
 }

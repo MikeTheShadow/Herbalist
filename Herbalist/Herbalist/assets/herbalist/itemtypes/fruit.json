@@ -1,0 +1,49 @@
+﻿{
+  code: "fruit",
+  maxstacksize: 64,
+  variantgroups: [
+    { code: "type", states: ["seabuckthorn"] }
+  ],
+  materialDensityByType: {
+    "*": 600,
+  },
+  attributes: {
+    foodTags: ["{fruit}"],
+  },
+  shapebytype: {},
+  texture: { "base" :  "item/fruit/{type}"},
+  creativeinventory: { "general": ["*"], "items": ["*"] },
+  nutritionPropsByType: {
+    "*": { satiety: 40, foodcategory: "Fruit" }
+  },
+  transitionablePropsByType: {
+    "*": [{
+      type: "Perish",
+      freshHours: { avg: 48 },
+      transitionHours: { avg: 12 },
+      transitionedStack: { type: "item", code: "game:rot" },
+      transitionRatio: 0.25
+    }]
+  },
+  guiTransformByType: {
+    "*": {
+      translation: { x: 0, y: 0, z: 0 },
+      rotation: { x: 0, y: 123, z: 33 },
+      origin: { x: 0.48, y: 0.6, z: 0.35 },
+      "scale": 1.2
+    }
+  },
+  groundTransformByType: {
+    "*": {
+      scale: 2.0
+    }
+  },
+  tpHandTransformByType: {
+  "*": {
+    translation: { x: 0.8, y: 0.2, z: 0.5 },
+    rotation: { x: -90, y: 20, z: 0 },
+    origin: { x: 0, y: 0, z: 0 },
+    scale: 0.2
+    }
+  },
+}

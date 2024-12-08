@@ -76,5 +76,11 @@
     "block-crop-rosemary-3": "Growing Rosemary",
     "block-crop-rosemary-4": "Mature Rosemary",
     "item-seeds-rosemary": "Rosemary Seeds",
-    "item-herb-rosemary" : "Rosemary"
+    "item-herb-rosemary" : "Rosemary",
+    
+    "_comment" : "Sea Buckthorn",
+    "block-berrybush-seabuckthorn-empty" : "Sea Buckthorn bush (Empty)",
+    "block-berrybush-seabuckthorn-flowering" : "Sea Buckthorn bush (Flowering)",
+    "block-berrybush-seabuckthorn-ripe" : "Sea Buckthorn bush (Ripe)",
+    "item-fruit-seabuckthorn" : "Sea Buckthorn"
 }

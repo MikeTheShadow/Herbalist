@@ -1,0 +1,97 @@
+﻿{
+  code: "berrybush",
+  class: "BlockBerryBush",
+  attributes: {
+    foodTags: ["sweetBerryBush"],
+    butterflyFeedByType: {
+      "*-flowering": true
+    },
+    beeFeedByType: {
+      "*-flowering": true
+    },
+    forageStatAffected: true,
+    reinforcable: true,
+  },
+  attributesByType: {
+    "*-seabuckthorn-*": {
+      resetBelowTemperature: -5,
+      stopBelowTemperature: 4,
+      revertBlockBelowTemperature: -2,
+      resetAboveTemperature: 35,
+      stopAboveTemperature: 30,
+      revertBlockAboveTemperature: 38,
+      stackable: true
+    }
+  },
+  entityclass: "BerryBush",
+  behaviorsByType: {
+    "*-ripe": [ {name: "Harvestable", properties: {
+      harvestTime: 0.6,
+      harvestedStack: { type: "item", code: "herbalist:fruit-{type}", quantity: { avg: 4.4 }  },
+      harvestedBlockCode: "herbalist:berrybush-{type}-empty"
+    }} ],
+  },
+  variantgroups: [
+    { code: "type", states: ["seabuckthorn"] },
+    { code: "state", states: ["empty", "flowering", "ripe"] },
+  ],
+  creativeinventory: { "general": ["*"], "flora": ["*"] },
+  renderpass: "OpaqueNoCull",
+  renderAlphaTest: 0.4,
+  shapeByType: {
+    "*-empty": { base: "game:block/plant/berrybush/large1", selectiveElements: ["branchesN", "branchesS", "Leaves", "Largeleaves/*"] },
+    "*": { base: "game:block/plant/berrybush/large1" },
+  },
+  blockmaterial: "Plant",
+  textures: {
+    "leavessmall": { base: "block/plant/berrybush/small/leaves/{type}*" },
+    "leaveslarge": { base: "block/plant/berrybush/large/leaves/{type}" },
+  },
+  texturesByType: {
+    "*-flowering": {
+      "flowerberrysmalltop": { base: "block/plant/berrybush/small/flower/{type}1", alternates: [{base: "block/plant/berrybush/small/flower/{type}2"}] },
+      "flowerberrysmall": { base: "block/plant/berrybush/small/flower/{type}1", alternates: [{base: "block/plant/berrybush/small/flower/{type}2"}] },
+      "flowerberrylarge": { base: "block/plant/berrybush/large/flower/{type}" },
+    },
+    "*-ripe": {
+      "flowerberrysmalltop": { base: "block/plant/berrybush/small/fruit/{type}top*" },
+      "flowerberrysmall": { base: "block/plant/berrybush/small/fruit/{type}1", alternates: [{base: "block/plant/berrybush/small/fruit/{type}2"}] },
+      "flowerberrylarge": { base: "block/plant/berrybush/large/fruit/{type}" },
+    }
+  },
+  sideopaque: {
+    all: false
+  },
+  sidesolid: {
+    all: false
+  },
+  replaceable: 3000,
+  lightAbsorption: 0,
+  resistance: 0.5,
+  collisionbox: null,
+  sounds: {
+    place: "game:block/plant",
+    break: "game:block/plant",
+    hit: "game:block/plant",
+    inside: "game:walk/inside/leafy/bushrustle*"
+  },
+  rainPermeable: false,
+  dropsByType: {
+    "*-ripe": [
+      { type: "block", code: "berrybush-{type}-empty", quantity: { avg: 1 }  },
+      { type: "item", code: "fruit-{type}", quantity: { avg: 4.4 }  },
+    ],
+    "*": [
+      { type: "block", code: "berrybush-{type}-empty", quantity: { avg: 1 }  }
+    ]
+  },
+  materialDensity: 400,
+  vertexFlags: {
+    zOffset: 2
+  },
+  combustibleProps: {
+    burnTemperature: 600,
+    burnDuration: 10,
+  },
+  frostable: true,
+}

@@ -13,7 +13,6 @@ public class HerbalistModSystem : ModSystem
     public override void Start(ICoreAPI api)
     {
         _api = api;
-        
         RegisterBlockEntity("ModifiedBush", typeof(BlockEntityModifiedBush));
     }
 

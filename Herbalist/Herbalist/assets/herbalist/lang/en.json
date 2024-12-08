@@ -98,5 +98,11 @@
     "block-crop-nettle-3": "Growing Nettle",
     "block-crop-nettle-4": "Mature Nettle",
     "item-seeds-nettle": "Nettle Seeds",
-    "item-herb-nettle" : "Nettle"
+    "item-herb-nettle" : "Nettle",
+    
+    "_comment" : "Teapot",
+    "block-teapot-raw" : "Raw teapot",
+    "block-teapot-burned" : "Teapot",
+    "block-teapot-cups-left" : "{0} cups",
+    "block-teapot-empty" : "Empty"
 }

@@ -82,5 +82,13 @@
     "block-berrybush-seabuckthorn-empty" : "Sea Buckthorn bush (Empty)",
     "block-berrybush-seabuckthorn-flowering" : "Sea Buckthorn bush (Flowering)",
     "block-berrybush-seabuckthorn-ripe" : "Sea Buckthorn bush (Ripe)",
-    "item-fruit-seabuckthorn" : "Sea Buckthorn"
+    "item-fruit-seabuckthorn" : "Sea Buckthorn",
+
+    "_comment" : "Dandelion",
+    "block-crop-dandelion-1": "Growing Dandelion",
+    "block-crop-dandelion-2": "Growing Dandelion",
+    "block-crop-dandelion-3": "Growing Dandelion",
+    "block-crop-dandelion-4": "Mature Dandelion",
+    "item-seeds-dandelion": "Dandelion Seeds",
+    "item-herb-dandelion" : "Dandelion"
 }

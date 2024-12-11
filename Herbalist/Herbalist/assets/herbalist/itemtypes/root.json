@@ -1,17 +1,24 @@
 ﻿{
   code: "root",
   maxstacksize: 64,
-  attributesByType: {
-  },
   variantgroups: [
     { code: "type", states: ["ginseng","ashwagandha","licorice"] }
   ],
+  attributesByType: {
+    "*-ginseng": {
+      buff: "herbalist:speed"
+    },
+    "*-ashwagandha": {
+      buff: "herbalist:strength"
+    },
+    "*-licorice": {
+      buff: "herbalist:luck"
+    }
+  },
   shapebytype: {},
   "texture": { "base" :  "item/root/{type}"},
   creativeinventory: { "general": ["*"], "items": ["*"] },
   nutritionPropsByType: {
-    "*-sage": { satiety: 15, foodcategory: "Vegetable" },
-    "*-thyme": { satiety: 15, foodcategory: "Vegetable" },
     "*": { satiety: 15, foodcategory: "Vegetable" }
   },
   transitionablePropsByType: {

@@ -10,6 +10,11 @@
   attributes: {
     foodTags: ["{fruit}"],
   },
+  attributesByType: {
+    "*-seabuckthorn" : {
+      buff: "herbalist:insulated"
+    }
+  },
   shapebytype: {},
   texture: { "base" :  "item/fruit/{type}"},
   creativeinventory: { "general": ["*"], "items": ["*"] },

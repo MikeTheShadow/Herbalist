@@ -1,10 +1,11 @@
 ﻿using Herbalist.blockentities;
+using Newtonsoft.Json;
+using Formatting = System.Xml.Formatting;
 
 namespace Herbalist.blocks;
 
 using System;
 using System.Text;
-using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
@@ -12,13 +13,13 @@ using Vintagestory.API.MathTools;
 
 public class BlockTeapot : Block
 {
-    public int CapacitySeconds = 5;
-
+    public int TotalCups = 5;
+    
     public override void OnLoaded(ICoreAPI coreApi)
     {
         base.OnLoaded(coreApi);
         JsonObject attributes = Attributes;
-        CapacitySeconds = attributes != null ? attributes["capacitySeconds"].AsInt(5) : 5;
+        TotalCups = attributes != null ? attributes["remainingCups"].AsInt(5) : 5;
     }
 
     public override void OnHeldInteractStart(
@@ -42,7 +43,7 @@ public class BlockTeapot : Block
             Block block1 = byEntity.World.BlockAccessor.GetBlock(blockSel.Position, 2);
             if (block1.LiquidCode != "water") return;
             BlockPos position = blockSel.Position;
-            SetRemainingCups(slot.Itemstack, CapacitySeconds);
+            SetRemainingCups(slot.Itemstack, TotalCups);
             slot.Itemstack.TempAttributes.SetInt("refilled", 1);
             slot.MarkDirty();
             byEntity.World.PlaySoundAt(new AssetLocation("sounds/block/water"), position.X,
@@ -56,7 +57,7 @@ public class BlockTeapot : Block
         base.OnGroundIdle(entityItem);
         if (!entityItem.FeetInLiquid)
             return;
-        SetRemainingCups(entityItem.Itemstack, CapacitySeconds);
+        SetRemainingCups(entityItem.Itemstack, TotalCups);
     }
 
     public override BlockDropItemStack[] GetDropsForHandbook(
@@ -151,9 +152,59 @@ public class BlockTeapot : Block
         base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
         dsc.AppendLine();
         int remainingCups = GetRemainingCups(inSlot.Itemstack);
-        
+
         dsc.AppendLine(remainingCups == 0
             ? Lang.Get("herbalist:block-teapot-empty")
             : Lang.Get("herbalist:block-teapot-cups-left", remainingCups));
+    }
+    
+    public override float GetMeltingPoint(
+        IWorldAccessor world,
+        ISlotProvider cookingSlotsProvider,
+        ItemSlot inputSlot) {
+        return 120.0f;
+    }
+    
+    public override float GetMeltingDuration(
+        IWorldAccessor world,
+        ISlotProvider cookingSlotsProvider,
+        ItemSlot inputSlot)
+    {
+        return 60;
+    }
+    
+    public override void DoSmelt(IWorldAccessor world, ISlotProvider cookingSlotsProvider, ItemSlot inputSlot, ItemSlot outputSlot) {
+        ItemStack[] ingredients = GetIngredients(world, cookingSlotsProvider);
+        outputSlot.Itemstack = inputSlot.Itemstack;
+        inputSlot.Itemstack = null;
+    }
+    
+    public override bool CanSmelt(IWorldAccessor world, ISlotProvider cookingSlotsProvider, ItemStack inputStack, ItemStack outputStack)
+    {
+        if (TotalCups == 0) return false;
+        
+        for (int index = 0; index < cookingSlotsProvider.Slots.Length; ++index)
+        {
+            ItemStack stack = cookingSlotsProvider.Slots[index].Itemstack;
+            
+            if (stack == null) continue;
+
+            string prettyJson = stack.ItemAttributes["buff"].AsString();
+            
+            api.Logger.Notification(prettyJson);
+        }
+        
+        return true;
+    }
+    
+    public ItemStack[] GetIngredients(IWorldAccessor world, ISlotProvider cookingSlotsProvider)
+    {
+        ItemStack[] ingredients = new ItemStack[cookingSlotsProvider.Slots.Length];
+        for (int index = 0; index < ingredients.Length; ++index)
+        {
+            ingredients[index] = cookingSlotsProvider.Slots[index].Itemstack;
+        }
+            
+        return ingredients;
     }
 }

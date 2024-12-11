@@ -28,6 +28,20 @@
 			requiresContainer: false
 		}
 	},
+	attributesByType: {
+		"*-burned" : {
+			remainingCups: 5,
+			shelvable: true,
+			cookingContainerSlots: 4,
+			maxContainerSlotStackSize: 4,
+			storageType: 1,
+			maxTemperature: 180,
+			inFirePitProps: {
+				transform: {},
+				useFirePitModel: "Wide"
+			}
+		}
+	},
 	blockmaterial: "Ceramic",
 	creativeinventory: { "general": ["*"], "construction": ["*"] },
 	replaceable: 1200,

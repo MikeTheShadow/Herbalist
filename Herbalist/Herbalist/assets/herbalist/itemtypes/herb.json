@@ -1,8 +1,6 @@
 ﻿{
   code: "herb",
   maxstacksize: 64,
-  attributesByType: {
-  },
   variantgroups: [
     { code: "type", states: ["sage", "thyme", "peppermint", "comfrey", "wildgarlic", "rosemary", "dandelion","nettle"] }
   ],
@@ -11,6 +9,30 @@
   creativeinventory: { "general": ["*"], "items": ["*"] },
   nutritionPropsByType: {
     "*": { satiety: 15, foodcategory: "Vegetable" }
+  },
+  
+  attributesByType: {
+    "*-sage" : {
+      buff: "herbalist:warding"
+    },
+    "*-thyme" : {
+      buff: "herbalist:warding"
+    },
+    "*-peppermint" : {
+      buff: "herbalist:speed"
+    },
+    "*-wildgarlic" : {
+      buff: "herbalist:strength"
+    },
+    "*-rosemary" : {
+      buff: "herbalist:insulated"
+    },
+    "*-dandelion" : {
+      buff: "herbalist:metabalance"
+    },
+    "*-nettle" : {
+      buff: "herbalist:metabalance"
+    }
   },
   transitionablePropsByType: {
     "*": [{

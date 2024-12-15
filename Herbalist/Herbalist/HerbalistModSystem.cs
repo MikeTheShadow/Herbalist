@@ -30,7 +30,7 @@ public class HerbalistModSystem : ModSystem
         RegisterBlockEntity("EntityTeapot", typeof(BlockEntityTeapot));
         RegisterBlock("BlockTeapot", typeof(BlockTeapot));
         
-        EffectRegistry.RegisterEffect(this, "speed", new EffectSpeed(_api));
+        EffectRegistry.RegisterEffect(this, "speed", new EffectSpeed());
         EffectRegistry.FreezeRegistry();
     }
 
@@ -45,15 +45,11 @@ public class HerbalistModSystem : ModSystem
 
         }, 1000,1000);
 
-        api.Event.PlayerNowPlaying += player =>
-        {
-            EffectManager.AddPlayerEffect("herbalist:speed", player, 10, 20);
-        };
+        // api.Event.PlayerNowPlaying += player => { };
     }
     
     public override void StartClientSide(ICoreClientAPI api)
     {
-        
         api.World.RegisterGameTickListener(_ =>
         {
             EffectManager.TickPlayerEffectsClient(api.World.Player);
@@ -74,7 +70,6 @@ public class HerbalistModSystem : ModSystem
 
     public override void Dispose()
     {
-        _api.Logger.Notification("Dispose cleanup!");
         EffectRegistry.ResetRegistry();
     }
 }

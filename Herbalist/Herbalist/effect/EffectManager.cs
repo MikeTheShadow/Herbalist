@@ -7,7 +7,7 @@ namespace Herbalist.effect;
 public class EffectManager
 {
     private readonly EffectRegistry _effectRegistry;
-    internal Dictionary<string, int> ClientSideEffectsWithDuration { get; } = new();
+    internal Dictionary<string, DurationStrengthPair> ClientSideEffectInfo { get; } = new();
     private readonly ICoreAPI _api;
 
     internal EffectManager(EffectRegistry registry, ICoreAPI api)
@@ -82,9 +82,8 @@ public class EffectManager
             int duration = attribute.GetInt("duration");
             int strength = attribute.GetInt("strength");
             effect.EffectTick(player, false, duration, strength);
-            _api.Logger.Notification("Duration: " + duration);
-            if(duration > 0) ClientSideEffectsWithDuration[attributes.Key] = duration;
-            else ClientSideEffectsWithDuration.Remove(attributes.Key);
+            if(duration > 0) ClientSideEffectInfo[attributes.Key] = new DurationStrengthPair(duration,strength);
+            else ClientSideEffectInfo.Remove(attributes.Key);
         }
     }
 
@@ -97,4 +96,6 @@ public class EffectManager
         
         return effectAttribute;
     }
+    
+    public record DurationStrengthPair(int Duration, int Strength);
 }

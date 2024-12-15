@@ -26,6 +26,8 @@ public interface IPlayerEffect
      *
      */
     public string EffectIconLocation();
+
+    public string EffectNameLocation();
     
     /**
      * Not used at the moment but can be implemented by anyone looking to potentially remove effects from players.

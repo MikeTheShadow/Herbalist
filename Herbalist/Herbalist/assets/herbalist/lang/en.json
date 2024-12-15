@@ -104,5 +104,9 @@
     "block-teapot-raw" : "Raw teapot",
     "block-teapot-burned" : "Teapot",
     "block-teapot-cups-left" : "{0} cups",
-    "block-teapot-empty" : "Empty"
+    "block-teapot-empty" : "Empty",
+    
+    
+    "_comment" : "Effects",
+    "effect-speed" : "Speed"
 }

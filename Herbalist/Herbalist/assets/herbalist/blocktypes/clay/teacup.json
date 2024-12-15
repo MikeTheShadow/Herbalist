@@ -1,5 +1,5 @@
 ﻿{
-  code: "bowl",
+  code: "teacup",
   classByType: {
     "*-fired": "BlockLiquidContainerTopOpened"
   },
@@ -17,10 +17,10 @@
       liquidContainerProps: {
         capacityLitres: 1,
         transferSizeLitres: 0.1,
-        emptyShapeLoc: "game:shapes/block/clay/bowl-empty-ground",
-        opaqueContentShapeLoc: "game:shapes/block/clay/bowl-contents",
-        liquidContentShapeLoc: "game:shapes/block/clay/bowl-liquidcontents",
-        liquidMaxYTranslate: 0.05
+        emptyShapeLoc: "shapes/block/clay/teacup",
+        opaqueContentShapeLoc: "shapes/block/clay/teacup-liquidcontents",
+        liquidContentShapeLoc: "shapes/block/clay/teacup-liquidcontents",
+        liquidMaxYTranslate: 0
       }
     },
     "*-raw": {
@@ -28,17 +28,17 @@
     }
   },
   combustiblePropsByType: {
-    "bowl-raw": {
+    "teacup-raw": {
       meltingPoint: 650,
       meltingDuration: 45,
       smeltedRatio: 1,
       smeltingType: "fire",
-      smeltedStack: { type: "block", code: "bowl-fired" },
+      smeltedStack: { type: "block", code: "teacup-fired" },
       requiresContainer: false
     }
   },
   shape: {
-    base: "game:block/clay/bowl-empty-ground"
+    base: "block/clay/teacup"
   },
   heldTpIdleAnimation: "holdbothhands",
   doNotRenderAtLod2: true,
@@ -49,8 +49,8 @@
       {
         tabs: ["general", "decorative"],
         stacks: [
-          { type: "block", code: "bowl-fired" },
-          { type: "block", code: "bowl-raw" }
+          { type: "block", code: "teacup-fired" },
+          { type: "block", code: "teacup-raw" }
         ]
       }
     ],
@@ -62,8 +62,7 @@
   lightAbsorption: 0,
   texturesByType: {
     "*-raw": {
-      floor: { base: "game:block/clay/blueclay" },
-      mat: { base: "game:block/clay/blueclay" }
+      all: { base: "game:block/clay/blueclay" }
     },
     "*-honey": {
       content: { base: "game:block/liquid/honey" }
